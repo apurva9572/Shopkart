@@ -1,0 +1,210 @@
+body{
+    margin: 0;
+    padding: 10px 10px;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    text-decoration: none;
+    width: auto;
+    height: 100%;
+}
+h1{
+    position: relative;
+    animation: heading;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+.home{
+    background: url(logo1.png);
+}
+
+.logo{
+    height: 25rem;
+    width: 25rem;
+    position: absolute;
+    top: 20px;
+    /* left: 90px;
+    bottom: 50%; */
+    animation: vibrate 4.5s;
+    animation-iteration-count: infinite;
+}
+
+   
+.home .banner {
+    color: #fff;
+    font-size: 5rem;
+    text-shadow: 0 0.3rem 0.5rem rgba(0,0,0,.3);
+}
+.home .slogan {
+    color: #fff;
+    font-size: 2.5rem;
+    font-weight: 400;
+}
+.home button {
+    height: 4rem;
+    width: 18rem;
+    background: #fff;
+    color: #444;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    border-radius: 15px;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 400;
+    box-shadow: 0 0.3rem 0.5rem rgba(0,0,0,.3);
+    animation: vibrate 3.5s;
+    animation-iteration-count: infinite;
+}
+.home button:hover{
+    background-image: linear-gradient(#91D8E4,#F56EB3);
+}
+
+.home button:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.home button:active {
+    color: #000
+}
+
+.home button:active:after {
+    background: transparent;
+    
+}
+
+.home button:hover:before {
+    opacity: 1;
+}
+
+.home button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* background: #fff; */
+    background-image: linear-gradient(#91D8E4,#F56EB3);
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+/* section {
+    display: block;
+} */
+/* :root {
+    --color: #6C5CE7;
+} */
+html {
+    font-size: 62.5%;
+} 
+#home{
+    background-image: linear-gradient(#810CA8,#C147E9);
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    text-align: center;
+    opacity: 1;
+    padding: 0 1rem;
+    position: relative;
+    overflow: hidden !important;
+}
+
+
+/* .glow-on-hover {
+    width: 220px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+} */
+
+
+
+
+.ocean {
+    height: 11rem;  /* change the height of the waves here  */
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow-x: hidden;
+  }
+  
+  .wave {
+    background: url(wave1.png);
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+  }
+  
+  .wave:nth-of-type(2) {
+    bottom: 0;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.5;
+  }
+  
+  .wave:nth-of-type(3) {
+    bottom: 0;
+    animation: wave 20s -1s linear infinite;
+    opacity: 0.5;
+  }
+  
+  @keyframes wave {
+      0% {transform: translateX(0);}
+      50% {transform: translateX(-25%);}
+      100% {transform: translateX(-50%);}
+  } 
+  @keyframes vibrate {
+    0% { transform: rotate(0deg); }
+    10% { transform: rotate(-1deg); }
+    20% { transform: rotate(1deg); }
+    30% { transform: rotate(0deg); }
+    40% { transform: rotate(1deg); }
+    50% { transform: rotate(-1deg); }
+    60% { transform: rotate(0deg); }
+    70% { transform: rotate(-1deg); }
+    80% { transform: rotate(1deg); }
+    90% { transform: rotate(0deg); }
+    100% { transform: rotate(-1deg); }
+}
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+@keyframes heading{
+    0% {top: -10px;}
+    100% {top: 30px;}
+  }
